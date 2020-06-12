@@ -35,7 +35,8 @@ class Timer():
 
 @client.on(events.NewMessage(func=lambda e: e.is_private, pattern="/start"))
 async def start_it(event):
-    await event.reply("مرحبا أرسل فيديو لا يزيد عن 2:20 دقيقة")
+    await event.reply("✋ مرحبا أرسل فيديو لا يزيد عن 2:20 دقيقة")
+    
 @client.on(events.NewMessage(func=lambda e: e.is_private and e.media))
 async def tint_it(event):
 
@@ -59,7 +60,7 @@ async def tint_it(event):
 
                 video = VideoFileClip(media)
 
-                if video.duration > 2 * 60 + 20:
+                if video.duration > 140:
                     await conv.send_message("هذا الفيديوا طويل جدا. اقصى حد هو 2:20 ثانية")
                 else:
                     subprocess.run(f'ffmpeg -i {media} -ss 0 -t 138.9 -filter_complex '
