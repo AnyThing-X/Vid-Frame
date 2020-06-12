@@ -1,0 +1,4 @@
+moviepy==1.0.0
+Pillow==7.1.2
+telethon==1.13.0
+cryptg==0.2.post0
