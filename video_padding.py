@@ -33,7 +33,9 @@ class Timer():
     def set_action(self, action):
         self.action = action
 
-
+@client.on(events.NewMessage(func=lambda e: e.is_private, pattern="/start"))
+async def start_it(event):
+    await event.reply("مرحبا أرسل فيديو لا يزيد عن 2:20 دقيقة")
 @client.on(events.NewMessage(func=lambda e: e.is_private and e.media))
 async def tint_it(event):
 
