@@ -1,0 +1,23 @@
+{
+    "env": {
+        "api_id": {
+            "description": "Get this value from https://my.telegram.org"
+        },
+        "api_hash": {
+            "description": "Get this value from https://my.telegram.org"
+        },
+        "bot_token": {
+            "description": "Get this Token from https://t.me/botfather"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+  
+    ]
+}
